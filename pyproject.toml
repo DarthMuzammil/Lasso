@@ -3,8 +3,8 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "llm-code-extractor"
-version = "0.1.0"
+name = "llmcodxtracter"
+version = "0.1.1"
 description = "A Python library for extracting code snippets using LLMs"
 readme = "README.md"
 authors = [{ name = "Mohammed Muzammil Inamdar", email = "muzammil.inamdar98@gmail.com" }]
