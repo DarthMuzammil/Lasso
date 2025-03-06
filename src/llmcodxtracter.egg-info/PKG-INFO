@@ -1,38 +1,50 @@
 Metadata-Version: 2.2
 Name: llmcodxtracter
-Version: 0.1.3
+Version: 0.1.5
 Summary: A Python library for extracting code snippets using LLMs
 Author-email: Mohammed Muzammil Inamdar <muzammil.inamdar98@gmail.com>
 License: MIT
-Project-URL: Homepage, https://github.com/DarthMuzammil/Lasso
-Project-URL: Repository, https://github.com/DarthMuzammil/Lasso
+Project-URL: Homepage, https://github.com/DarthMuzammil/llmcodxtracter
+Project-URL: Repository, https://github.com/DarthMuzammil/llmcodxtracter
 Requires-Python: >=3.7
 Description-Content-Type: text/markdown
 Requires-Dist: openai
 
-# Lasso
+# llmcodxtracter
 
 [![PyPI](https://img.shields.io/pypi/v/lasso.svg)](https://pypi.org/project/lasso/)
 [![License](https://img.shields.io/github/license/DarthMuzammil/Lasso)](LICENSE)
 
-Lasso is a Python package designed to extract code snippets from plain text using Large Language Models (LLMs).
+llmcodxtracter is a Python package designed to extract code snippets from plain text using Large Language Models (LLMs).
 
 ## Installation
 
 Install via pip:
 
 ```sh
-pip install lasso
+pip install llmcodxtracter
 ```
 
 ## Usage
 ### python
 ```py
-from lasso import extractor
+from llmcodxtracter.processor import LLMOutputProcessor
+from llmcodxtracter.validator import LLMOutputValidator
+from llmcodxtracter.extractor import LLMCodeExtractor
+from llmcodxtracter.exceptions import LLMOutputException
+# Instantiate components
+validator = LLMOutputValidator()
+extractor = LLMCodeExtractor()
+processor = LLMOutputProcessor(validator, extractor)
 
-text = "Here's some Python code: print('Hello World')"
-code_snippet = extractor.extract_code(text)
-print(code_snippet)
+# Example usage
+text = "```python //script.py print('Test')```"
+try:
+    code_block = processor.process(text)
+    print(code_block)
+except LLMOutputException as e:
+    print(f"Error processing LLM output: {e}")
+
 ```
 
 ## Features
@@ -42,7 +54,7 @@ print(code_snippet)
 
 ## Contributing
 - Fork the repository.
-- Clone it: git clone https://github.com/DarthMuzammil/Lasso.git
+- Clone it: git clone https://github.com/DarthMuzammil/llmcodxtracter.git
 - Install dependencies: pip install -r requirements.txt
 - Submit a pull request!
 
