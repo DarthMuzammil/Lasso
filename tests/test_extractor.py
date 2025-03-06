@@ -1,6 +1,6 @@
 import pytest
-from src.extractor import LLMCodeExtractor
-from src.exceptions import LLMOutputException
+from src.llmcodxtracter.extractor import LLMCodeExtractor
+from src.llmcodxtracter.exceptions import LLMOutputException
 import re
 
 extractor = LLMCodeExtractor()

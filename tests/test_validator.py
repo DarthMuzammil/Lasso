@@ -1,6 +1,6 @@
 import pytest
-from src.validator import LLMOutputValidator
-from src.exceptions import LLMOutputException
+from src.llmcodxtracter.validator import LLMOutputValidator
+from src.llmcodxtracter.exceptions import LLMOutputException
 
 validator = LLMOutputValidator()
 

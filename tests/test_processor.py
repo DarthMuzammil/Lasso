@@ -1,6 +1,6 @@
 import pytest
-from src.processor import LLMOutputProcessor, LLMOutputValidator, LLMCodeExtractor
-from src.exceptions import LLMOutputException
+from src.llmcodxtracter.processor import LLMOutputProcessor, LLMOutputValidator, LLMCodeExtractor
+from src.llmcodxtracter.exceptions import LLMOutputException
 
 validator = LLMOutputValidator()
 extractor = LLMCodeExtractor()
