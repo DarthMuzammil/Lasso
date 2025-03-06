@@ -1,6 +1,6 @@
 Metadata-Version: 2.2
 Name: llmcodxtracter
-Version: 0.1.5
+Version: 0.2.4
 Summary: A Python library for extracting code snippets using LLMs
 Author-email: Mohammed Muzammil Inamdar <muzammil.inamdar98@gmail.com>
 License: MIT
