@@ -13,34 +13,31 @@ Install via pip:
 pip install lasso
 ```
 
-Usage
-python
-Copy
-Edit
+## Usage
+### python
+```py
 from lasso import extractor
 
 text = "Here's some Python code: print('Hello World')"
 code_snippet = extractor.extract_code(text)
 print(code_snippet)
-Features
-Extracts code snippets from plain text.
-Supports multiple programming languages.
-Easily integrates into other LLM-based projects.
-Contributing
-Fork the repository.
-Clone it: git clone https://github.com/DarthMuzammil/Lasso.git
-Install dependencies: pip install -r requirements.txt
-Submit a pull request!
-License
+```
+
+## Features
+- Extracts code snippets from plain text.
+- Supports multiple programming languages.
+- Easily integrates into other LLM-based projects.
+
+## Contributing
+- Fork the repository.
+- Clone it: git clone https://github.com/DarthMuzammil/Lasso.git
+- Install dependencies: pip install -r requirements.txt
+- Submit a pull request!
+
+## License
 This project is licensed under the MIT License.
 
-yaml
-Copy
-Edit
-
----
-
-### Next Steps
+## Next Steps
 1. Make sure `src/lasso/__init__.py` exists.
 2. Create `pyproject.toml` (or use `setup.py` if preferred).
 3. Build and upload to PyPI using `twine`.
