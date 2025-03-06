@@ -42,7 +42,7 @@ except LLMOutputException as e:
 
 ## Contributing
 - Fork the repository.
-- Clone it: git clone https://github.com/DarthMuzammil/Lasso.git
+- Clone it: git clone https://github.com/DarthMuzammil/llmcodxtracter.git
 - Install dependencies: pip install -r requirements.txt
 - Submit a pull request!
 
