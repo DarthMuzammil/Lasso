@@ -1,4 +1,4 @@
-# Lasso
+# llmcodxtracter
 
 [![PyPI](https://img.shields.io/pypi/v/lasso.svg)](https://pypi.org/project/lasso/)
 [![License](https://img.shields.io/github/license/DarthMuzammil/Lasso)](LICENSE)
@@ -10,17 +10,29 @@ Lasso is a Python package designed to extract code snippets from plain text usin
 Install via pip:
 
 ```sh
-pip install lasso
+pip install llmcodxtracter
 ```
 
 ## Usage
 ### python
 ```py
-from lasso import extractor
+from llmcodxtracter.processor import LLMOutputProcessor
+from llmcodxtracter.validator import LLMOutputValidator
+from llmcodxtracter.extractor import LLMCodeExtractor
+from llmcodxtracter.exceptions import LLMOutputException
+# Instantiate components
+validator = LLMOutputValidator()
+extractor = LLMCodeExtractor()
+processor = LLMOutputProcessor(validator, extractor)
 
-text = "Here's some Python code: print('Hello World')"
-code_snippet = extractor.extract_code(text)
-print(code_snippet)
+# Example usage
+text = "```python //script.py print('Test')```"
+try:
+    code_block = processor.process(text)
+    print(code_block)
+except LLMOutputException as e:
+    print(f"Error processing LLM output: {e}")
+
 ```
 
 ## Features
